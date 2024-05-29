@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;  
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    height: 100;
+    background-color: rgb(0, 56, 112);
+    position:fixed;
+    z-index: 5;
+}
+ul {
+    text-align: center;
+}
+ul li {
+    list-style: none;
+    display: inline-block;
+    float: none;
+    line-height: 90px;
+}
+ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    color: whitesmoke;
+    font-weight: bold;
+    padding: 0 35px;
+}
+ul li a:hover {
+    background-color: rgb(23, 83, 143);
+}
+/* Navbar end */
+
+/* Modal */
+.open-button {
+    position: absolute;
+    top: 480px;
+    left: 50vw;
+    transform: translateX(49%);
+    cursor: pointer;
+    background: none;
+    width: 150px; 
+    height: 150px; 
+    background-color: rgb(238, 77, 56); 
+    border-radius: 50%;
+}
+.lesson {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 3px solid rgb(23, 83, 143);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(250, 250, 250);
+    width: 500px;
+    max-width: 75%;
+    z-index: 1;
+}
+.lesson.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.lesson-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 14;
+    padding-left: 10px;
+    border-bottom: dashed 3px rgb(225, 225, 225);
+}
+.lesson-header .close-button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+.lesson-body {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, .25);
+    pointer-events: none;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.play-button {
+    display: flex;
+    justify-content: space-evenly;
+    transform: translateX(-50%);
+    cursor: pointer;
+    background-color: rgb(100, 200, 100);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    font-weight: bold;
+    border: 3px white;
+    border-radius: 10%;
+}
+.play, .play:hover, .play:visited, .play:active {
+    color: white;
+    text-decoration: none;
+}
+/* Modal end */
+
+/* Grid */
+.grid-container{
+    position: absolute;
+    height: 100%;
+    top: 175px;
+    left: 50%;
+    transform: translatex(-50%);
+    grid-gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(1, 125px);
+    grid-auto-rows: 125px;
+}
+
+.letter-button {
+    background-color: rgb(250, 250, 250);
+    border-color: rgb(23, 83, 143);
+    min-height: 125px;
+    min-width: 125px;
+    border-radius: 25%;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* End grid */
+
+/* Animations */
+#animation1 {
+    position: absolute; 
+    height: 500px;
+    top:200px;
+    left: 50vw;
+    transform: translateX(-150%);
+
+}
+#animation2 {
+    position: absolute; 
+    height: auto;
+    top:1000px;
+    left: 50vw;
+    transform: translateX(50%); 
+}
+/* Animations end */
+
+/* Flexbox */
+.stats-container{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    row-gap: 10px;
+    top: 175px;
+    left: 50%;
+    transform: translatex(-50%);
+}
+.item {
+    background-color: rgb(253, 253, 253);
+    border: 1px solid rgb(23, 83, 143);
+    color: rgb(15, 46, 77);
+    display: flex;
+    min-height: 30px;
+    min-width: 400px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.stat, .user-stat {
+    font-weight: bold;
+}
+.statistics {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+/* Flexbox end */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 56, 112, .1);
+    color: white;
+    text-align: center;
+    padding: 3px;
+    font-size: 10px;
+}
+.contact {
+    color: white;
+}
+.contact:visited {
+    color: purple;
+}
+.contact:hover{
+    color: blue;
+}
+.contact:active{
+    color: blue;
+}
+.contact-container {
+    position: absolute;
+    display: flex;
+    left: 50vw;
+    transform: translatex(-50%);
+    top: 175px;
+    justify-content: center;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    border: 1px solid rgb(23, 83, 143);
+    background-color: rgb(250, 250, 250);
+    border-radius: 20px;
+    padding: 20px;
+}
+.contact-title {
+    color: rgb(15, 46, 77);
+}
+.input{
+    border: 1px solid rgb(23, 83, 143);
+    background-color: rgb(245, 245, 245);
+    padding-left: 20px;
+    border-radius: 20px;
+    width: 400px;
+    height: 40px;
+}
+.area {
+    border: 1px solid rgb(23, 83, 143);
+    background-color: rgb(250, 250, 250);
+    padding-left: 20px;
+    padding-top: 10px;
+    border-radius: 20px;
+    width: 400px;
+    height: 120px;
+    min-width: 400px;
+    min-height: 25px;
+}
+.send-button {
+    background: linear-gradient(90deg, rgb(22, 96, 170), rgb(43, 113, 179));
+    color: #fff;
+    width: 75px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid rgb(23, 83, 143);
+    border-radius: 20px;
+}
+
+/* Queries */
+@media screen and (min-width: 295px) and (max-width: 456px){
+    .grid-container {
+        grid-template-columns: repeat(2, 125px);
+    }
+}
+@media screen and (min-width: 457px) and (max-width: 666px){
+    .grid-container {
+        grid-template-columns: repeat(3, 125px);
+    }
+}
+
+@media screen and (min-width: 667px) and (max-width: 979px){
+    .grid-container {
+        bottom: 0;
+        grid-template-columns: repeat(4, 125px);
+    }
+}
+@media screen and (min-width: 980px){
+    .grid-container {
+        bottom: 0;
+        grid-template-columns: repeat(5, 125px);
+    }
+    
+}
+/* Queries end*/

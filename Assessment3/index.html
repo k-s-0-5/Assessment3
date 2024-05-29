@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LanguageLearner</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+	<script defer src="lesson.js"></script>
+	<style>
+		body {
+			background-image: url('720x2160.png');
+		  	background-color:rgb(108, 229, 94);
+		  	background-repeat: repeat-y;
+			background-position: 50% 0%;
+			min-height: 100vh;
+			height: 150vh;
+		}
+	</style> 
+	</head>
+
+	<body>
+		
+		<nav>
+			<ul>
+				<li><a style="background-color: rgb(23, 83, 143);" href ="index.html"><img src="Home.png" style ="width: 75px; padding-top: 30px;"></a></li>
+				<li><a href ="alphabet.html"><img src="ABC.png" style ="width: 75px; padding-top: 30px;"></a></li>
+				<li><a href ="stats.html"><img src="graph.png" style ="width: 75px; padding-top: 30px;"></a></li>
+			</ul>
+		</nav>
+		
+
+		<button data-lesson-target="#lesson" class="open-button"></button>
+		<div class = "lesson" id="lesson">
+            <div class="lesson-header">
+                <div class="title">Lesson 1</div>
+				<button data-close-button class="close-button">&times;</button>
+			</div>
+		    <div class = "lesson-body">
+				Learn simple words and basic sentence structure.
+			</div>
+			<div><button class="play-button"><a class ="play" href ="play.html">Play</a></button></div>		
+		</div>
+        <div id="overlay"></div>
+		
+		<dotlottie-player id="animation1"
+			src="tree.json"
+			background="transparent" 
+			speed="1" 
+			style="width: 500px; height: 500px;" 
+			loop autoplay>
+		</dotlottie-player>
+
+		<dotlottie-player id="animation2"
+			src="tree.json"
+			background="transparent" 
+			speed="1" 
+			style="width: 500px; height: 500px;" 
+			loop autoplay>
+		</dotlottie-player>
+
+
+		<footer>
+			<p>Designed by Kjeld Schweizer. <a class ="contact" href ="contact.html">Contact me</a></p>
+		</footer>
+
+	</body>
+</html>
